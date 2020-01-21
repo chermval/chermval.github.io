@@ -1,8 +1,25 @@
 /* body */
+body {
+	background-color: #364f6b;
+}
+
+header {
+	background-color: #3fc1c9;
+	color: #f5f5f5;
+}
+
 .title {
 	text-align: center;
+	
 }
 
 .sub-title {
 	text-align: center;
 }
+
+.test{
+	background-color:: #fc5185;
+}
+
+
+
