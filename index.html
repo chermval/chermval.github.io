@@ -2,9 +2,11 @@
 <html>
 	<head>
 		<title>Portafolio</title>
-		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css">	
 	</head>
 	
 	<body>
@@ -13,18 +15,62 @@
 			<h1 class="title">Claudia Paz Hermosilla Valdebenito</h1>
 			<h2 class="sub-title">RESUMEN</h2>
 		</header>
-		<div>
+		<div class="resume-description">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 				Quisque elementum sapien est, sed semper tortor convallis tempor. 
 				Ut nibh nulla, consequat ut diam non, tincidunt commodo tortor. 
 				Aliquam vitae egestas.</p>
 		</div>
+		<br/>
+		
+		<div class="btn-group btn-group-lg box" role="group" aria-label="Basic example">
+			<button class="btn btn-primary btn-box" type="button" data-toggle="collapse" data-target="#experience" 
+				aria-expanded="false" aria-controls="experience">
+				Experiencia
+			</button>
+		
+			<button class="btn btn-primary btn-box" type="button" data-toggle="collapse" data-target="#education" 
+				aria-expanded="false" aria-controls="education">
+				Educación
+			</button>
+		
+			<button class="btn btn-primary btn-box" type="button" data-toggle="collapse" data-target="#others" 
+				aria-expanded="false" aria-controls="others">
+				Otros
+			</button>
+
+			<div class="collapse" id="experience">
+				<div class="card card-body">
+					Lorem ipsum dolor sit amet
+				</div>
+			</div>
+			<div class="collapse" id="education">
+				<div class="card card-body">
+					Quisque elementum sapien est
+				</div>
+			</div>
+			<div class="collapse" id="others">
+				<div class="card card-body">
+					Ut nibh nulla, consequat
+				</div>
+			</div>
+		  </div>
 		
 		<br/>
-		<button type="button" class="btn btn-primary test">Mas información</button>
-		  
 		<footer>
+			<p>
+			Información de contacto <br/>
+			Fono: +56 9 <br/>
+			Mail: <a href="mailto:hermval.c@gmail.com">hermval.c@gmail.com</a>.
+			</p>
+		
+	
 			<p>Create by chermosi, 2020</p>
+		
+			
+			
+			
+			
 		</footer>
 	</body>
 </html>
