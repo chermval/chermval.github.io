@@ -7,6 +7,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" type="text/css" href="css/main.css">	
+		<script src="js/resume.js"></script> 
 	</head>
 	
 	<body>
@@ -23,42 +24,36 @@
 		</div>
 		<br/>
 		
-		<div class="btn-group btn-group-lg box" role="group" aria-label="Basic example">
-			<button class="btn btn-primary btn-box" type="button" data-toggle="collapse" data-target="#experience" 
-				aria-expanded="false" aria-controls="experience">
-				Experiencia
-			</button>
-		
-			<button class="btn btn-primary btn-box" type="button" data-toggle="collapse" data-target="#education" 
-				aria-expanded="false" aria-controls="education">
-				Educación
-			</button>
-		
-			<button class="btn btn-primary btn-box" type="button" data-toggle="collapse" data-target="#others" 
-				aria-expanded="false" aria-controls="others">
-				Otros
-			</button>
-	
-			<div class="collapse" id="experience">
-				<div class="card card-body detail-box">
-					Lorem ipsum dolor sit amet
-				</div>
-			</div>
-			<div class="collapse" id="education">
-				<div class="card card-body detail-box">
-					Quisque elementum sapien est
-				</div>
-			</div>
-			<div class="collapse" id="others">
-				<div class="card card-body detail-box">
-					Ut nibh nulla, consequat
-				</div>
-			</div>
-				
+		<div class="resume-information">
+			<ul class="nav nav-tabs nav-justified tab-info">
+				<li class="active">
+					<a class="tab-title" data-toggle="tab" data-target="#experience">EXPERIENCIA</a>
+				</li>
+				<li>
+					<a class="tab-title" data-toggle="tab" data-target="#education">EDUCACIÓN</a>
+				</li>
+				<li>
+					<a class="tab-title" data-toggle="tab" data-target="#others">OTROS</a>
+				</li>
+			</ul>
 			
+			<div class="tab-content tab-body">
+				<div id="home" class="tab-pane fade in active">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div id="experience" class="tab-pane fade">
+					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<div id="education" class="tab-pane fade">
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+				</div>
+				<div id="others" class="tab-pane fade">
+					<p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+				</div>
+			</div>
 		</div>
+
 		
-		<br/>
 		<footer>
 			<p>
 			Información de contacto <br/>
@@ -66,13 +61,7 @@
 			Mail: <a href="mailto:hermval.c@gmail.com">hermval.c@gmail.com</a>.
 			</p>
 		
-	
 			<p>Create by chermosi, 2020</p>
-		
-			
-			
-			
-			
 		</footer>
 	</body>
 </html>
