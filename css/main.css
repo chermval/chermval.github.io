@@ -25,10 +25,12 @@ footer {
 
 .title {
 	text-align: center;
+	padding-top: 1%;
 }
 
 .sub-title {
 	text-align: center;
+	padding: 1%;
 }
 
 .resume-description{
@@ -36,6 +38,7 @@ footer {
 	margin-left: auto;
 	margin-right: auto;
 	border-bottom: 2px solid #4f3222;
+	padding: 3%;
 }
 
 .resume-information{
@@ -47,7 +50,7 @@ footer {
 
 .tab-title{
 	border-bottom-color:#fbefcc !important;
-	color: #dd7b5a;
+	color: #cc6948;
 }
 
 .tab-title:hover{
@@ -67,7 +70,7 @@ footer {
 
 .tab-body{
 	background-color: #fbefcc !important;
-	padding: 10px;
+	padding: 4%;
 }
 
 footer p a{
