@@ -50,22 +50,23 @@ footer {
 
 .tab-title{
 	border-bottom-color:#fbefcc !important;
-	color: #cc6948;
+	color: #cc6948 !important;
+	font-weight: bold !important;
 }
 
 .tab-title:hover{
 	border-color: #fbefcc !important;
 	background-color: #fbefcc !important;
-	color: #4f3222;
-	font-weight: bold;
+	color: #4f3222 !important;
+	font-weight: bold !important;
 	border-radius: 0;
 }
 
-.tab-info li.active .tab-title{
+.tab-info li a.active{
 	border-color: #fbefcc !important;
 	background-color:#fbefcc !important; 
-	color: #4f3222;
-	font-weight: bold;
+	color: #4f3222 !important;
+	font-weight: bold !important;
 }
 
 .tab-body{
@@ -76,7 +77,12 @@ footer {
 footer p a{
 	color: #4f3222;
 }
-  
+
+.loading{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+}
  
   
 
