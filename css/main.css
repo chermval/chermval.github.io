@@ -19,8 +19,8 @@ footer {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	background-color: #e0876a;
-	color: #4f3222;
+	background-color:#f9ccac;
+	color: #4f3222; 
 }
 
 .title {
@@ -41,7 +41,7 @@ footer {
 	padding: 3%;
 }
 
-.resume-information{
+.resume-detail{
 	max-width: 85%;
 	margin-left: auto;
 	margin-right: auto;
@@ -74,8 +74,9 @@ footer {
 	padding: 4%;
 }
 
-footer p a{
+footer p{
 	color: #4f3222;
+	text-align: right;
 }
 
 .loading{
@@ -84,5 +85,12 @@ footer p a{
     left: 50%;
 }
  
-  
+.contact-info{
+	font-size: small;
+	text-align: center;
+}
 
+.contact-info a{
+	color: #4f3222;
+	font-weight: bold;
+}

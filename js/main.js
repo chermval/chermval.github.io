@@ -81,7 +81,7 @@ function processReferenceDetails(detailsRef){
 }
 
 function createResumeInformationTitle(key){
-    var listTab = document.getElementById("resume-information-title");
+    var listTab = document.getElementById("resume-detail-title");
     
     if (listTab.getElementsByTagName("li").length === 0){
         classActive = "active";
@@ -104,7 +104,7 @@ function createResumeInformationTitle(key){
 }
 
 function createResumeInformationContent(key){
-    var list = document.getElementById("resume-information-content");
+    var list = document.getElementById("resume-detail-content");
 
     if (list.getElementsByTagName("div").length === 0){
         classStatus = "active";
@@ -126,14 +126,14 @@ function createResumeInformationContent(key){
 function hideElementOnLoad(){
     document.getElementById("resume-header").style.display = "none";
     document.getElementById("resume-description").style.display = "none";
-    document.getElementById("resume-information").style.display = "none";
+    document.getElementById("resume-detail").style.display = "none";
     document.getElementById("resume-footer").style.display = "none";
 }
 
 function showElementOnLoad(){
     document.getElementById("resume-header").style.display = "block";
     document.getElementById("resume-description").style.display = "block";
-    document.getElementById("resume-information").style.display = "block";
+    document.getElementById("resume-detail").style.display = "block";
     document.getElementById("resume-footer").style.display = "block";
 }
 
