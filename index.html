@@ -2,39 +2,48 @@
 <html>
 	<head>
 		<title>Portafolio</title>
-
-		<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
 		<script src="js/main.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 	</head>
 	
 	<body>
 		
-		<header>
+		<div class="loading" id="loading">
+			<div class="spinner-border text-info spinner-border-lg" role="status">
+				<span class="sr-only">Loading</span>
+			</div>
+		</div>
+
+		<header id="resume-header">
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+			
 			<h1 class="title"></h1>
-			<h2 class="sub-title"></h2>
+			<h2 class="sub-title"></h2>	
+			<div class="contact-info">
+				<p>
+					+56 9 XXXXXXXX / <a href="mailto:hermval.c@gmail.com">hermval.c@gmail.com</a>
+				</p>
+			</div>
 		</header>
-		<div class="resume-description"></div>
+		
+		<div class="resume-description" id="resume-description"></div>
 		<br/>
 		
-		<div class="resume-information">
-
-			<ul class="nav nav-tabs nav-justified tab-info" id="resume-information-title"></ul>
+		<div class="resume-detail" id="resume-detail">
+			<ul class="nav nav-tabs nav-justified tab-info" id="resume-detail-title"></ul>
 			
-			<div class="tab-content tab-body" id="resume-information-content"></div>
+			<div class="tab-content tab-body" id="resume-detail-content"></div>
 		
 		</div>
 
-		<footer>
-			<p>
-			Información de contacto <br/>
-			Fono: +56 9 <br/>
-			Mail: <a href="mailto:hermval.c@gmail.com">hermval.c@gmail.com</a>.
-			</p>
+		<footer id="resume-footer">
+			
 		
 			<p>Create by chermosi, 2020</p>
 		</footer>
