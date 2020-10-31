@@ -104,7 +104,7 @@ function createResumeInformationTitle(key){
     listTab.appendChild(itemTab);
 }
 
-function createResumeInformationContent(key){
+function createResumeInformationContent(key, values){
     var list = document.getElementById("resume-detail-content");
 
     if (list.getElementsByTagName("div").length === 0){
