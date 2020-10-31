@@ -62,10 +62,11 @@ function loadBasicInfoResume(desc){
 function processReferenceDetails(detailsRef){
     let requestCall = new Promise((resolve, reject) => {
         detailsRef.on("child_added", function(data) {
-            createResumeInformationTitle(data.key);
-            createResumeInformationContent(data.key);
-            //console.log(Object.keys(data.val()));
-            //console.log(Object.values(data.val()));
+            dataKey = data.key;
+            dataValues = Object.values(data.val());
+
+            createResumeInformationTitle(dataKey);
+            createResumeInformationContent(dataKey,dataValues);
 
             resolve(true)
         })
@@ -117,10 +118,34 @@ function createResumeInformationContent(key){
     item.setAttribute('class',"container tab-pane "+classStatus);
     
     var elementItem = document.createElement("p");
-    elementItem.appendChild(document.createTextNode(key+" Lorem ipsum dolor sit amet, consectetur adipisicng elit."));
+
+    if (key === 'experiencia'){
+        elementItem.appendChild(  createTimeline(values) );
+    }else{
+        elementItem.appendChild(document.createTextNode(key+" Lorem ipsum dolor sit amet, consectetur adipisicng elit."));
+    }
     
     item.appendChild(elementItem);        
     list.appendChild(item);
+}
+
+function createTimeline(values){
+    var list = document.createElement("ul");
+    list.setAttribute('class',"timeline");
+
+    // order list element of timeline by date 
+    sortedValues = values.sort((a, b) => new Date(b.practica.start_date) -  new Date(a.practica.start_date) );
+   
+    // create element of timeline
+    sortedValues.forEach((item, i) => {
+        var itemList = document.createElement("li");
+        var itemtitle = document.createElement("a");
+        itemtitle.appendChild(document.createTextNode(item.name));
+        itemList.appendChild(itemtitle);    
+        list.appendChild(itemList);     
+    });
+
+    return list;
 }
 
 function hideElementOnLoad(){
