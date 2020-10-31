@@ -40,6 +40,7 @@ function proccessReferenceBasicData(basicDataRef){
         var infoPersonal = data.val();
         loadBasicInfoName(infoPersonal.name);
         loadBasicInfoResume(infoPersonal.desc);
+        loadContactInfo(infoPersonal.mail, infoPersonal.phone);
       });
 
 }
@@ -50,6 +51,18 @@ function loadBasicInfoName(name){
 
     var subTitle = document.getElementsByClassName("sub-title");
     subTitle[0].appendChild(document.createTextNode("RESUMEN"));
+}
+
+function loadContactInfo(mail, phone){
+    var contact = document.getElementsByClassName("contact-info");
+    var contactInfo = document.createElement("p");
+    var mailContact = document.createElement("a"); 
+    mailContact.href = "mailto:"+mail;
+    mailContact.appendChild(document.createTextNode(mail));
+    contactInfo.appendChild(document.createTextNode(phone+" / "));
+    contactInfo.appendChild(mailContact);
+    
+    contact[0].appendChild(contactInfo);
 }
 
 function loadBasicInfoResume(desc){
@@ -139,13 +152,29 @@ function createTimeline(values){
     // create element of timeline
     sortedValues.forEach((item, i) => {
         var itemList = document.createElement("li");
-        var itemtitle = document.createElement("a");
-        itemtitle.appendChild(document.createTextNode(item.name));
-        itemList.appendChild(itemtitle);    
+        itemList.appendChild(createTimelineCard(item));    
         list.appendChild(itemList);     
     });
 
     return list;
+}
+
+// create card element of timeline
+function createTimelineCard(item){
+    var itemCard = document.createElement("div");
+    var itemCardHeader = document.createElement("div");
+    var itemCardBody = document.createElement("div");
+
+    itemCardHeader.appendChild(document.createTextNode(
+            "[ "+item.practica.start_date+" - "+
+            item.practica.end_date+" ] "+ item.name) );
+    itemCardHeader.setAttribute('class',"timeline timeline-card-header");
+    itemCardBody.appendChild(document.createTextNode("Ut nibh nulla, consequat ut diam non"));
+    
+    itemCard.appendChild(itemCardHeader);
+    itemCard.appendChild(itemCardBody);
+    
+    return itemCard;
 }
 
 function hideElementOnLoad(){
